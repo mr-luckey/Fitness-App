@@ -54,8 +54,7 @@ class _IconFieldsState extends State<IconFields> {
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(10),
               ),
-              prefixIcon:
-                  widget.icon != null ? Icon(widget.icon) : SizedBox.shrink(),
+              prefixIcon: Icon(widget.icon),
               suffixIcon: IconButton(
                 icon: Icon(
                   ispassword! ? Icons.visibility_off : Icons.visibility,
@@ -77,7 +76,7 @@ class _IconFieldsState extends State<IconFields> {
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(10),
               ),
-              prefixIcon: Icon(Icons.email),
+              prefixIcon: widget.icon != null ? Icon(Icons.email) : null,
             ),
           );
   }

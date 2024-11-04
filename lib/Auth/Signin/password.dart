@@ -4,10 +4,9 @@ import 'package:fitness_freel/Widgets/Input_Fields.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class NameScreen extends StatelessWidget {
-  NameScreen({super.key});
-  TextEditingController firstnamecontroller = TextEditingController();
-  TextEditingController lastnamecontroller = TextEditingController();
+class PasswordScreen extends StatelessWidget {
+  PasswordScreen({super.key});
+  TextEditingController Passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +42,14 @@ class NameScreen extends StatelessWidget {
                       height: 20,
                     ),
                     Text(
-                      "What's Your Name?",
+                      "Choose a password",
                       style: headingstyle.copyWith(fontSize: 24),
                     ),
                     Text(
-                      "Nothing compares to a healthy body",
+                      "We take your health first over everything",
                       style: TextStyle(
                           color: Colors.white.withOpacity(0.7),
+                          fontSize: 13,
                           fontFamily: gymfont),
                     ),
                   ],
@@ -67,7 +67,7 @@ class NameScreen extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          "First name",
+                          "Password",
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: gymfont,
@@ -79,48 +79,51 @@ class NameScreen extends StatelessWidget {
                       ),
                     ),
                     IconFields(
-                      icon: null,
-                      // icon: Icons.email_outlined,
-                      ispass: false,
-                      controller: firstnamecontroller,
+                      // icon: null,
+                      icon: Icons.lock,
+                      ispass: true,
+                      controller: Passwordcontroller,
                     ),
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, bottom: 5),
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Last name",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontFamily: gymfont,
-                            fontSize: 10,
-                            // fontWeight: FontWeight.bold
-                          ),
-                        ),
-                      ),
-                    ),
-                    IconFields(
-                      icon: Icons.lock_outline_rounded,
-                      ispass: false,
-                      controller: lastnamecontroller,
-                    ),
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+              //   child: Column(
+              //     children: [
+              //       Padding(
+              //         padding: const EdgeInsets.only(left: 10, bottom: 5),
+              //         child: Align(
+              //           alignment: Alignment.centerLeft,
+              //           child: Text(
+              //             "Last name",
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //               color: Colors.white,
+              //               fontFamily: gymfont,
+              //               fontSize: 10,
+              //               // fontWeight: FontWeight.bold
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //       IconFields(
+              //         // icon: Icons.lock_outline_rounded,
+              //         ispass: false,
+              //         controller: lastnamecontroller,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               SizedBox(
-                height: 60,
+                height: Get.height * 0.3,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 70, right: 70),
-                child: Button(onPressed: () {}, title: "Continue"),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 70, right: 70),
+                  child: Button(onPressed: () {}, title: "Continue"),
+                ),
               ),
               SizedBox(
                 height: Get.height * 0.2,
